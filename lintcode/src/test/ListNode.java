@@ -2,21 +2,19 @@ package test;
 
 public class ListNode {
 	
-	int value;
+	int val;
 	ListNode next;
 	
-	ListNode(){}
-	
-	ListNode(int value){
-		this.value = value;
+	ListNode(int val){
+		this.val = val;
 	}
 	
-	ListNode(int value, ListNode node){
-		this.value = value; 
+	ListNode(int val, ListNode node){
+		this.val = val; 
 		next = node;
 	}
 	
 	public String toString() {
-		return value + "->" + next;
+		return val + "->" + next;
 	}
 }
