@@ -4,6 +4,17 @@ import java.util.List;
 
 public class Util {
 	
+	public static void print(int[] a) {
+		System.out.print("[");
+		for(int i = 0; i < a.length; i++) {
+			if(i != 0) {
+				System.out.print(",");
+			}
+			System.out.print(a[i]);
+		}
+		System.out.println("]");
+	}
+	
 	public static void print(int[][] matrix) {
 		if(matrix.length == 0) {
 			System.out.println("[]");
