@@ -31,6 +31,23 @@ public class Util {
 			System.out.println("]");
 		}
 	}
+	
+	public static void print(boolean[][] matrix) {
+		if(matrix.length == 0) {
+			System.out.println("[]");
+			return;
+		}
+		for(int i = 0; i < matrix.length; i++) {
+			System.out.print("[");
+			for(int j = 0; j < matrix[i].length; j++) {
+				if(j > 0) {
+					System.out.print(",");
+				}
+				System.out.print(matrix[i][j] ? 1 : 0);
+			}
+			System.out.println("]");
+		}
+	}
 
 	public static <T> void print(T[][] matrix) {
 		if(matrix.length == 0) {
