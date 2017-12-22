@@ -14,12 +14,15 @@ public class EditDistance {
      * @return: The minimum number of steps.
      */
     public static int minDistance(String word1, String word2) {
-    	if(word1.equals("") || word2.equals("")) {
+    	if(word1.length() == 0 || word2.length() == 0) {
     		return Math.max(word1.length(), word2.length());
     	}
     	char[] c1 = word1.toCharArray();
     	char[] c2 = word2.toCharArray();
     	int[][] dp = new int[c1.length + 1][c2.length + 1];
+    	for(int i = 1; i <= c1.length; i++) {
+    		dp[i][0] = i;
+    	}
     	for(int i = 1; i <= c2.length; i++) {
     		dp[0][i] = i;
     	}
@@ -38,7 +41,9 @@ public class EditDistance {
 
 	public static void main(String[] args) {
 		String word1 = "mart";
+		word1 = "sea";
 		String word2 = "karma";
+		word2 = "ate";
 		System.out.println(minDistance(word1, word2));
 	}
 
