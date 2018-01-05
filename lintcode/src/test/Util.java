@@ -20,6 +20,10 @@ public class Util {
 	}
 	
 	public static void print(int[] a) {
+		if(a == null) {
+			System.out.println("null");
+			return;
+		}
 		System.out.print("[");
 		for(int i = 0; i < a.length; i++) {
 			if(i != 0) {
