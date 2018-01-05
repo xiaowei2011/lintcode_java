@@ -107,4 +107,17 @@ public class Util {
 			System.out.print("]");
 		}
 	}
+	
+	public static ListNode arrayToList(int[] a) {
+		if(a == null || a.length == 0) {
+			return null;
+		}
+		ListNode head = new ListNode(a[0]);
+		ListNode p = head;
+		for(int i = 1; i < a.length; i++) {
+			p.next = new ListNode(a[i]);
+			p = p.next;
+		}
+		return head;
+	}
 }
